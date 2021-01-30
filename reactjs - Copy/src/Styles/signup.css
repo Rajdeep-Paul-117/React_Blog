@@ -1,0 +1,45 @@
+.m{
+    text-align: center;
+}
+.sp{
+    background-color: violet;
+    margin-top: 8%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 0;
+}
+.fom{
+    font-size: 24px;
+    text-align: center;
+}
+.fom label input{
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+}
+.rtr{
+    height: 50px;
+    width: 100px;
+    border: none;
+    background-color: red;
+    color: wheat;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+@media (max-width:680px)
+{
+    .sp{
+        margin: 0%;
+    }
+    .fom label input
+    {
+        margin: 5px;
+        display: inline-block;
+        width: 90%;
+    }
+    .rtr{
+        margin-top: 10px;
+    }
+    
+}

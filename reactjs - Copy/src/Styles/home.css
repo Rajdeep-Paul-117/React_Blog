@@ -1,0 +1,55 @@
+.h{
+    background-color: blueviolet;
+    border-top: 2px solid blueviolet;
+}
+.posts{
+    display: block;
+    background-color: thistle;
+    margin: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.posts h1{
+    color: black;
+    text-align: center;
+    text-shadow: 4px 4px whitesmoke;
+    font-size: 35px;
+}
+.posts p{
+    color: black;
+    margin: 10px;
+    font-size: 18px;
+    
+    height:75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.posts img{
+    height: 350px;
+    width: 100%;
+    display: block;
+}
+.im{
+    margin: 10px;
+}
+.h :hover  {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+.posts :hover{
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+    
+}
+.rm{
+    margin-left: 10px;
+    color:blueviolet !important;
+    display: block;
+    text-shadow:4px 4px thistle;
+    font-size: 25px;
+    text-align: center;
+}
