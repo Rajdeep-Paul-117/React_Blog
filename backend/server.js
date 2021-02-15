@@ -4,6 +4,7 @@ var mongoose=require('mongoose');
 var bodyParser=require('body-parser')
 var cors=require('cors');
 var passport=require('passport')
+require('dotenv').config();
 
 var postRoutes=require('./router/post')
 var userRoutes=require('./router/user')
@@ -16,9 +17,7 @@ app.use(cors({
     
 }));
 
-
-var db='mongodb://localhost/blog';
-
+var db=process.env.MONGODB_URI;
 mongoose.connect(db,{useNewUrlParser:true});
 
 var connection=mongoose.connection;

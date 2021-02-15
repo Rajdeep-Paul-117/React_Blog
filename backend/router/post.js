@@ -21,7 +21,7 @@ router.post('/add_post',islogedin,function(req,res){
         }
         else
         {
-        console.log(data);
+       // console.log(data);
         }
     })
 })
@@ -31,7 +31,7 @@ router.put('/edit_post',isAuthor,function(req,res){
         console.log(err)
         else
         {
-            console.log(data)
+           // console.log(data)
         }
     })
 })
@@ -42,7 +42,7 @@ router.post('/delete_post',isAuthor,function(req,res){
         throw err;
         else
         {
-            console.log("Deleted")
+           // console.log("Deleted")
             res.send("ok")
         }
     })
@@ -71,12 +71,12 @@ function islogedin(req,res,next)
 {
     if(req.isAuthenticated())
     {
-        console.log("logedin")
+     //   console.log("logedin")
         return next();
     }
     else
     {   
-        console.log("not loged in")
+      //  console.log("not loged in")
     }
 }
 
