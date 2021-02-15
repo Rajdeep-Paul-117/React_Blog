@@ -12,7 +12,7 @@ export class Post extends Component {
         window.scrollTo(0,0);
     }
     bsubmit=(id)=>{
-        axios.post('http://localhost:4000/delete_post',{id}).then(
+        axios.post('https://blogsdiary.herokuapp.com/delete_post',{id}).then(
             res=>{
                 this.props.dispatch(removepost({
                     id:id
@@ -28,14 +28,14 @@ export class Post extends Component {
         return (
             this.props.posts.filter(({id})=>id===id1)).map((post)=>(
             <div className="p" key={post.id}>
-                {show=post.userid===user._id?true:false}
+                {show=user?post.userid===user._id?true:false:false}
                 <h1 className="t">{post.title}</h1>
                 <div className="pim">
                     <object data={post.image} type="image">
                         <img src="https://picsum.photos/200/300"alt={post.title} ></img>
                     </object>
                 </div>
-                <p> {post.content}</p>
+                <p> {post.content}</p> 
                 {
                     show?(
                         <div>
@@ -48,7 +48,6 @@ export class Post extends Component {
             
         ))
         } catch (error) {
-            
             this.props.history.push('/notfound')   
             return null
         }

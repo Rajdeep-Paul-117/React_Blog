@@ -17,7 +17,7 @@ export default class Signup extends Component {
             password:e.target.password.value,
             DOB:e.target.DOB.value
         }
-        axios.post('http://localhost:4000/register',user).then(
+        axios.post('https://blogsdiary.herokuapp.com/register',user).then(
             user=>{
                 if(user.data.email)
                 {

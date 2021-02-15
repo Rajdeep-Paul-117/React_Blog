@@ -6,6 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node server.js",
     "start:dev": "nodemon server.js",
+    "client-install": "cd reactjs && npm install",
+    "client": "cd reactjs && npm start",
     "heroku-postbuild": "cd reactjs && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "keywords": [],

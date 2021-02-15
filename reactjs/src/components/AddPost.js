@@ -28,7 +28,7 @@ export class AddPost extends Component {
             content:e.target.ct.value,
             image:e.target.im.value
         }
-        axios.post('http://localhost:4000/add_post',post).then(
+        axios.post('https://blogsdiary.herokuapp.com/add_post',post).then(
             res=>{
             }
         )

@@ -7,7 +7,7 @@ export class Logout extends Component {
     componentDidMount()
     {
         
-    axios.get('http://localhost:4000/logout').then(
+    axios.get('https://blogsdiary.herokuapp.com/logout').then(
     res=>{
         localStorage.clear();
         this.props.history.push('/')

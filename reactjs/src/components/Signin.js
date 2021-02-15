@@ -15,7 +15,7 @@ export class Signin extends Component {
             email:e.target.email.value,
             password:e.target.password.value
         }
-        axios.post('http://localhost:4000/signin',detail,).then(
+        axios.post('https://blogsdiary.herokuapp.com/signin',detail,).then(
             result=>{
                 if(result.data.status==="Successfully logedin")
                 {   

@@ -30,7 +30,7 @@ export class AddPost extends Component {
             content:e.target.ct.value,
             image:e.target.im.value
         }
-        axios.put('http://localhost:4000/edit_post',post).then(
+        axios.put('https://blogsdiary.herokuapp.com/edit_post',post).then(
             res=>{
             }
         )
