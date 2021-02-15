@@ -21,7 +21,7 @@ function App() {
       })  
     }
   )*/
-  axios.get('http://localhost:4000/getposts').then(
+  axios.get('https://blogsdiary.herokuapp.com/getposts').then(
     res=>{
       res.data.map((p)=>{
         store.dispatch(addpost({
