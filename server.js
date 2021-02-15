@@ -4,6 +4,7 @@ var mongoose=require('mongoose');
 var bodyParser=require('body-parser')
 var cors=require('cors');
 var passport=require('passport')
+const path = require("path")
 require('dotenv').config();
 
 var postRoutes=require('./router/post')
@@ -44,6 +45,13 @@ passport.deserializeUser(function(user,done){
 
 app.use(postRoutes)
 app.use(userRoutes)
+
+
+app.use(express.static(path.join(__dirname, "reactjs", "build")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "reactjs", "build", "index.html"));
+});
+
 
 app.listen(process.env.PORT || 4000, function(){
     console.log("server is running");
