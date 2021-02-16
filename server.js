@@ -20,6 +20,8 @@ app.use(bodyParser.json());
     
 }));*/
 
+app.use(cors());
+
 
 var db=process.env.MONGODB_URI;
 mongoose.connect(db,{useNewUrlParser:true});
