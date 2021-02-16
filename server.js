@@ -6,13 +6,11 @@ var cors=require('cors');
 var passport=require('passport')
 const path = require("path")
 
-const header_middleware = require("./middleware/header")
 require('dotenv').config();
 
 var postRoutes=require('./router/post')
 var userRoutes=require('./router/user')
 
-app.use(header_middleware)
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
