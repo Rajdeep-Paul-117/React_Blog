@@ -21,7 +21,7 @@ function App() {
       })  
     }
   )*/
-  axios.get('http://blogsdiary.herokuapp.com/getposts').then(
+  axios.get('https://blogsdiary.herokuapp.com/getposts').then(
     res=>{
       res.data.map((p)=>{
         store.dispatch(addpost({
