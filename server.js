@@ -6,7 +6,7 @@ var cors=require('cors');
 var passport=require('passport')
 const path = require("path")
 
-const header_middleware = require("./middlewares/header")
+const header_middleware = require("./middleware/header")
 require('dotenv').config();
 
 var postRoutes=require('./router/post')
