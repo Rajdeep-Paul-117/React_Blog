@@ -9,7 +9,6 @@ import Contact from '../components/Contact'
 import NotFound from '../components/NotFound'
 import Post from '../components/Post'
 import AddPost from '../components/AddPost'
-import Test from '../components/test'
 import Logout from '../components/Logout'
 import EditPost from '../components/EditPost'
 
@@ -21,7 +20,6 @@ export class Routes extends Component {
         return (
             <BrowserRouter>
                 <Header/>
-                <Test/>
                 <Switch>
                 <Route path='/' component={Home} exact={true} ></Route>
                 <Route path='/about' component={About}></Route>

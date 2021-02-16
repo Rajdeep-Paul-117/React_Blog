@@ -13,7 +13,7 @@ var userRoutes=require('./router/user')
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors({
-    origin:'http://localhost:3000',
+    origin:'https://blogsdiary.herokuapp.com',
     credentials: true // enable set cookie
     
 }));
