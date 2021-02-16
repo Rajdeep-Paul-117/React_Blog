@@ -13,16 +13,12 @@ var userRoutes=require('./router/user')
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors({
+    methods: 'GET,POST,PATCH,DELETE,OPTIONS',
     origin:'https://blogsdiary.herokuapp.com',
     credentials: true // enable set cookie
     
 }));
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    next();
-});
+app.options('*', cors());
 
 var db=process.env.MONGODB_URI;
 mongoose.connect(db,{useNewUrlParser:true});
