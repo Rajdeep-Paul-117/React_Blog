@@ -17,6 +17,12 @@ app.use(cors({
     credentials: true // enable set cookie
     
 }));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+});
 
 var db=process.env.MONGODB_URI;
 mongoose.connect(db,{useNewUrlParser:true});
