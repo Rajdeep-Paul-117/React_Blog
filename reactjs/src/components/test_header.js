@@ -5,7 +5,6 @@ export class test_header extends Component {
     render() {
         return (
             <div className="n">
-                    <NavLink to="/" activeClassName="act" className="n1" exact={true}>Home</NavLink>
                     <NavLink to="/About" activeClassName="act" className="n1">About</NavLink>
                     <NavLink to="/contact" activeClassName="act" className="n1">Contact</NavLink>
                     <NavLink to="/addpost" activeClassName="act" className="n1">Add Blog</NavLink> 

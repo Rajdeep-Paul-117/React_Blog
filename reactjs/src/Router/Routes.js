@@ -11,6 +11,7 @@ import Post from '../components/Post'
 import AddPost from '../components/AddPost'
 import Logout from '../components/Logout'
 import EditPost from '../components/EditPost'
+import Test from '../components/test_header'
 
 const user=JSON.parse(localStorage.getItem('user'))
 
@@ -20,6 +21,7 @@ export class Routes extends Component {
         return (
             <BrowserRouter>
                 <Header/>
+                <Test/>
                 <Switch>
                 <Route path='/' component={Home} exact={true} ></Route>
                 <Route path='/about' component={About}></Route>

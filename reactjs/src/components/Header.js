@@ -7,7 +7,7 @@ const user=JSON.parse(localStorage.getItem('user'))
 export class Header extends Component {
     render() {
         return (
-            <div className="n">
+            <div>
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark h0 c">
                 <NavLink to="/" activeClassName="act" className="nb" exact={true}>Home</NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
