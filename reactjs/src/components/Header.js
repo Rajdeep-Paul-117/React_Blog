@@ -16,12 +16,6 @@ export class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                    <NavLink to="/About" activeClassName="act" className="n1">About</NavLink>
-                    </li>
-                    <li className="nav-item">
-                    <NavLink to="/contact" activeClassName="act" className="n1">Contact</NavLink>
-                    </li>
-                    <li className="nav-item">
                     {user?(<NavLink to="/addpost" activeClassName="act" className="n1">AddBlog</NavLink>):null}
                     </li>
                     </ul>
